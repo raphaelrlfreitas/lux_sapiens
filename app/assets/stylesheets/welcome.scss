@@ -1,0 +1,83 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'font-awesome';
+
+
+* { box-sizing: border-box; }
+//Colors from Color Pallete
+
+$darkblue: #0E394D;
+$neonblue1: #4FD5E9; //test of different tones for neonblue
+$neonblue: #08F7FE;
+$purple: #560A86;
+$lightpurple: #7122FA;
+$neonpink: #F148FB;
+$lightpink: #FFACFC;
+
+//Navegation Menu
+
+#header-nav{
+    background-color: $purple;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100vw;
+}
+
+#logo{
+    display: flex;
+    max-height: 75%;
+    margin-left: 3rem;
+    margin-top: .75rem; 
+    float: left; 
+}
+
+#main-nav{
+    display: block;
+    float: left;
+    padding-top: .75rem;
+    height: 100%;
+    width:70%;
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+
+    a{
+        font-family: learning-curve,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        color:white;
+        font-size: 2em;
+        padding-right: 1em;
+        &:hover{
+            text-shadow: 0 0 5px $neonblue;
+        }
+    }
+}
+
+.nav-social{
+    display: block;
+    float: right;
+    height: 100%;
+    width: 15%;
+    padding-top: 1.5em;
+    text-align: right;
+    margin-right: 1em;
+    a{ 
+        color: white;
+        font-size: 1.2em;
+        padding-right: 1em;
+        &:hover{
+            text-shadow: 0 0 5px $neonblue;
+        }
+    }
+}
