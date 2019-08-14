@@ -17,13 +17,27 @@
 //Imported Fonts
 
  @import url("https://use.typekit.net/pen2ljp.css");
+ @import "bootstrap";
+ @import 'font-awesome';
 
- //Color from Pallete
+ //Quick Fixes
 
- $darkblue: #0E394D;
- $neonblue1: #4FD5E9; //test of different tones for neonblue
- $neonblue: #08F7FE;
- $purple: #560A86;
- $lightpurple: #7122FA;
- $neonpink: #F148FB;
- $lightpink: #FFACFC;
+ * { box-sizing: border-box; }
+
+ //Colors from Color Pallete
+
+$darkblue: #051d3b;
+$navbg: rgba(5, 29, 59, .5);
+$neonblue1: #4FD5E9; //test of different tones for neonblue
+$neonblue: #08F7FE;
+$purple: #560A86;
+$lightpurple: #7122FA;
+$neonpink: #F148FB;
+$lightpink: #FFACFC;
+
+body{
+    background-color: $darkblue;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}

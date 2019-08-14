@@ -5,32 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lux Sapiens - Telling beautiful stories through visuals</title>
-    
-
-
 </head>
-<body>
-    <header id="header-nav">
-    
-        <%= image_tag('logo.png', :alt => 'LuxSapiens Logo', :id => 'logo') %>
 
-        <nav id="main-nav">
-            <ul>
-                <li><%= link_to('About us','#about-us') %></li>
-                <li><%= link_to('Services','#services') %></li>
-                <li><%= link_to('Our Work','#our-work') %></li>
-                <li><%= link_to('Contact','#contact-home') %></li>
-            </ul>
+<body>
+
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-dark">
+            <%= link_to(root_path,:class => 'navbar-brand navbar-logo') do %>
+            <%= image_tag('logo.png', :alt => 'LuxSapiens Logo', :id => 'logo', :class => 'navbar-brand') %>
+            <% end %>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav main-nav ml-auto mr-auto justify-content-center">
+                    <li class="nav-item active">
+                        <%=  link_to( "About", "#about", :class => "nav-link") %>
+                    </li>
+                    <li class="nav-item">
+                        <%=  link_to( "Services", "#services", :class => "nav-link") %>
+                    </li>
+                    <li class="nav-item">
+                        <%=  link_to( "Our Work", "#our-work", :class => "nav-link") %>
+                    </li>
+                    <li class="nav-item">
+                        <%=  link_to( "Contact", "#contact-home", :class => "nav-link") %>
+                    </li>
+                </ul>
+                <div class="navbar-social">
+                    <span class="navbar-text navbar-social">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item active">
+                                <%= link_to root_path do %>
+                                <%= content_tag :i, "", :class => "fa fa-youtube" %>
+                                <% end %>
+                            </li>
+                            <li class="nav-item">
+                                <%= link_to root_path do %>
+                                <%= content_tag :i, "", :class => "fa fa-instagram" %>
+                                <% end %>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         </nav>
-        <div class="nav-social">
-            <%= link_to root_path do %>
-            <%= content_tag :i, "", :class => "fa fa-youtube" %>
-            <% end %>
-            <%= link_to root_path do %>
-            <%= content_tag :i, "", :class => "fa fa-instagram" %>
-            <% end %>
+    </header>
+
+
+    <section id="home-hero">
+        <div class="video-hero">
+            <%= video_tag("video-wertvoll-about.webm", :autoplay => true, :muted => true, :loop => true)  %>
         </div>
 
-    </header>
+    </section>
+
+    <section id="about" class="bg-white video-fix">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <h2 class="text-center text-justify">About Us</h2>
+                    <hr class="divider-darkblue">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem ducimus obcaecati
+                        sed vel voluptatum dolorem, debitis dolor animi porro mollitia nesciunt enim assumenda totam
+                        tempore iusto non possimus quidem.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem ducimus obcaecati
+                        sed vel voluptatum dolorem, debitis dolor animi porro mollitia nesciunt enim assumenda totam
+                        tempore iusto non possimus quidem.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem ducimus obcaecati
+                        sed vel voluptatum dolorem, debitis dolor animi porro mollitia nesciunt enim assumenda totam
+                        tempore iusto non possimus quidem.</p>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4 about-img-wrapper">
+                    <%= image_tag("blur-camera-depth-of-field-2608519.jpg", :class => "about-img", :alt => "about-image") %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-darkblue">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="service-wrapper">
+                        <div class="service-icon"><i class="fa fa-camera fa-2x"></i></div>
+
+                        <div class="service-description">
+                            <h3 class="text-left">Photography</h3>
+                            <p>Still photography can be one of the most arresting ways of getting your customers’
+                                attention.
+                                Having come up with a great concept, I’ll take care of all elements of the photo-shoot
+                                to make sure that it runs seamlessly and we get the very best results.
+                                I work hard to stay on top of all of my chosen fields; perfecting lighting, nailing
+                                compositions and capturing that one moment that says it all.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-wrapper">
+                        <div class="service-icon"><i class="fa fa-camera fa-2x"></i></div>
+                        <div class="service-description">
+                            <h3 class="text-left">Video Production</h3>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde suscipit voluptas, est sit
+                                qui aperiam veniam repellat. Illo, explicabo vitae. Consectetur aut tempore possimus
+                                amet suscipit dolorum, officiis optio aliquam?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod architecto, doloribus
+                                saepe accusantium distinctio expedita officia consequuntur repudiandae ab! Sunt enim
+                                incidunt sint quisquam ipsa praesentium earum voluptas modi!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="service-wrapper">
+                            <div class="service-icon"><i class="fa fa-camera fa-2x"></i></div>
+    
+                            <div class="service-description">
+                                <h3 class="text-left">Photography</h3>
+                                <p>Still photography can be one of the most arresting ways of getting your customers’
+                                    attention.
+                                    Having come up with a great concept, I’ll take care of all elements of the photo-shoot
+                                    to make sure that it runs seamlessly and we get the very best results.
+                                    I work hard to stay on top of all of my chosen fields; perfecting lighting, nailing
+                                    compositions and capturing that one moment that says it all.</p>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="service-wrapper">
+                            <div class="service-icon"><i class="fa fa-camera fa-2x"></i></div>
+                            <div class="service-description">
+                                <h3 class="text-left">Video Production</h3>
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde suscipit voluptas, est sit
+                                    qui aperiam veniam repellat. Illo, explicabo vitae. Consectetur aut tempore possimus
+                                    amet suscipit dolorum, officiis optio aliquam?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quod architecto, doloribus
+                                    saepe accusantium distinctio expedita officia consequuntur repudiandae ab! Sunt enim
+                                    incidunt sint quisquam ipsa praesentium earum voluptas modi!</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="our-work" class="bg-white video-fix">
+        <div class="container-fluid no-padding">
+            <div class="row no-padding">
+                <div class="col-lg-12 section-title">
+                    <h2 class="text-center">Our Latest Work</h2>
+                    <hr class="divider-darkblue">
+                </div>
+                
+            </div>
+
+            <!-- Commented out the navigation for categories of work since now only showing the last 9 entries -->
+
+            <!-- <div class="row">
+                    <div class="col-lg-12 work-categories">
+                            <ul class="nav categories-nav justify-content-center">
+                                    <li class="nav-item active">
+                                        <%=  link_to( "Comercial", "#", :class => "nav-link") %>
+                                    </li>
+                                    <li class="nav-item">
+                                        <%=  link_to( "Photography", "#", :class => "nav-link") %>
+                                    </li>
+                                    <li class="nav-item">
+                                        <%=  link_to( "Promotional", "#", :class => "nav-link") %>
+                                    </li>
+                                    <li class="nav-item">
+                                        <%=  link_to( "Tourism", "#", :class => "nav-link") %>
+                                    </li>
+                                </ul>
+                    </div>
+        </div> -->
+
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("camera-operator.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+            </div>
+                
+            </div>
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-1.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4>                 
+            </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-2.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-3.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-4.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-5.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-6.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-7.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="grid-img-container">
+                <%= image_tag("grid-img-8.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <h4 class="grid-text">This is a test!</h4> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 </body>
 </html>
