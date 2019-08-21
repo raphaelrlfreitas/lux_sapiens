@@ -1,0 +1,286 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'application';
+
+
+
+// Styling classes
+
+
+.bg-white{
+    background-color: white;
+    color: $darkblue;
+}
+
+.bg-darkblue{
+    background-color: $darkblue;
+    color: white;
+}
+
+.divider-white{
+    width: 4rem;
+    border-top: 2px solid white;
+}
+
+.divider-darkblue{
+    width: 4rem;
+    border-top: 2px solid $darkblue;
+}
+
+//Navegation Menu
+
+#header-nav{
+    background-color: $navbg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+
+}
+
+#logo{
+    max-height: 65px;
+    margin-left: 3rem;
+    margin-top: .75rem;     
+
+}
+
+.main-nav{
+    .nav-item{
+        padding-right: 30px;
+        a{
+            font-family: learning-curve,sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-decoration: none;
+            color:white;
+            font-size: 2em;
+            &:hover{
+                text-shadow: 0 0 5px $neonblue; 
+            }
+        }
+    }
+}
+.navbar-social {
+    .nav-item {
+        a {
+            color: white;
+            font-size: 1.7em;
+            padding-right: 1em;
+            &:hover {
+                text-shadow: 0 0 5px $neonblue;
+            }
+        }
+    }
+}
+
+//Hero Section
+
+.video-hero {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -99;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+//About Section
+
+#about{
+    position: relative;
+    top: 100vh;
+    padding-bottom: 3rem;
+    h2{
+        margin-top: 3rem;
+        margin-bottom: 3rem;    
+    }
+    p{
+        margin-left: 2rem;
+        margin-top: 1.5rem;
+    }    
+}
+
+
+
+.about-img-wrapper{
+    margin-top: auto;
+    margin-bottom: auto;
+    img{
+       padding: 1.5rem;
+    }
+
+}
+
+.about-img{
+    max-width: 100%;
+}
+
+// Services Section
+
+#services{
+    position: relative;
+    top: 100vh;
+}
+
+.services-title{
+    padding-bottom: 3rem;
+}
+
+.serices-container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.serices-bg-img{
+    background-image: image-url('camera-operator.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(50,50,50,0.3);
+    z-index: -2;
+    &::before{
+        background-color: $darkblue;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.7;
+    }
+}
+
+.service-icon{
+    height: 2em;
+}
+
+.service-wrapper{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon{
+    margin-right: 1.5rem;
+}
+
+
+// Our Work Section
+
+#our-work{
+    position: relative;
+    top: 100vh;
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.section-title{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.work-categories{
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.categories-nav{
+    .nav-item{
+        padding-right: 30px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        a{
+            font-family: 'Raleway',sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-decoration: none;
+            color:white;
+            font-size: 1em;
+            &:hover{
+                text-shadow: 0 0 5px $neonblue; 
+            }
+        }
+    }
+}
+
+.grid-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+}
+
+.grid-img-container{
+    height: 0;
+    padding-top: 80%;
+}
+
+.no-padding{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    max-width: 100vw;
+}
+
+.grid-text{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(50,50,50,0.3);
+    padding: .2rem .5rem;
+}
+
+
+// CONTACT SECTION
+
+#contact-home{
+    position: relative;
+    top:100vh;
+    padding: 2rem 0;
+}
+
+.contact-form-text-area{
+    border-radius: 5px;
+    width: 40vw;
+    @media (max-width: 768px){
+        width: 80vw;
+    }
+}
+
+.contact-form-label{
+    padding-top: 1rem;
+}
+
+// Footer
+#footer{
+    position: relative;
+    top: 100vh;
+    padding-top: .5rem;
+}
+
+.footer-social{
+    
+    float: right;
+    .nav-item{
+        display: inline-block;
+        vertical-align: middle;
+        a{
+            color: $darkblue;
+        }
+    }
+}
