@@ -66,6 +66,8 @@
 }
 .navbar-social {
     .nav-item {
+        display: inline-block;
+        vertical-align: middle;
         a {
             color: white;
             font-size: 1.7em;
@@ -266,7 +268,8 @@
     padding-top: 1rem;
 }
 
-// Footer
+// FOOTER
+
 #footer{
     position: relative;
     top: 100vh;
