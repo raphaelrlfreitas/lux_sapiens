@@ -227,8 +227,11 @@
 }
 
 .grid-img-container{
-    height: 0;
+    height: 100%;
     padding-top: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .no-padding{
@@ -256,9 +259,17 @@
     padding: 2rem 0;
 }
 
+form input[type=text] {
+    width: 100%;
+}
+
+
+#new_contact .col {
+    width: 60vw;
+}
 .contact-form-text-area{
     border-radius: 5px;
-    width: 40vw;
+    width: 100%;
     @media (max-width: 768px){
         width: 80vw;
     }

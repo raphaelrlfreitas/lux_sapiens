@@ -202,61 +202,52 @@
 
         <div class="row no-gutters">
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("camera-operator.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("camera-operator.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
             </div>
                 
             </div>
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-1.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-1.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4>                 
             </div>
             </div>
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-2.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-2.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-3.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-3.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-4.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-4.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-5.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-5.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
         </div>
         <div class="row no-gutters">
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-6.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-6.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-7.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-7.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="grid-img-container">
-                <%= image_tag("grid-img-8.jpg", :class => "grid-img", :alt => "grid-image") %>
+                <div class="grid-img-container" style="background-image: url(<%= image_path("grid-img-8.jpg")%>)">
                 <h4 class="grid-text">This is a test!</h4> 
                 </div>
             </div>
@@ -278,10 +269,10 @@
                 <%= form_for Contact.new do |f| %>
                 <div class="col">
                     <%= f.label :name, class: "contact-form-label" %></br>
-                    <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+                    <%= f.text_field  :name, required: true, class: "contact-form-text-field" %></br>
 
                     <%= f.label :email, class: "contact-form-label" %></br>
-                    <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+                    <%= f.text_field :email, required: true, class: "contact-form-text-field" %></br>
 
                     <%= f.label :message, class: "contact-form-label" %></br>
                     <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
